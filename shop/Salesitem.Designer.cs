@@ -56,6 +56,9 @@
             textBox6 = new TextBox();
             label4 = new Label();
             textBox7 = new TextBox();
+            textBox8 = new TextBox();
+            label5 = new Label();
+            button3 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
@@ -263,7 +266,7 @@
             // 
             button1.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             button1.ForeColor = SystemColors.ControlText;
-            button1.Location = new Point(833, 517);
+            button1.Location = new Point(833, 573);
             button1.Name = "button1";
             button1.Size = new Size(146, 38);
             button1.TabIndex = 33;
@@ -314,7 +317,7 @@
             dataGridView2.Name = "dataGridView2";
             dataGridView2.RowHeadersWidth = 51;
             dataGridView2.RowTemplate.Height = 29;
-            dataGridView2.Size = new Size(593, 108);
+            dataGridView2.Size = new Size(486, 156);
             dataGridView2.TabIndex = 43;
             dataGridView2.CellContentClick += dataGridView2_CellContentClick;
             dataGridView2.CellDoubleClick += dataGridView2_CellDoubleClick;
@@ -358,13 +361,45 @@
             textBox7.Size = new Size(208, 27);
             textBox7.TabIndex = 48;
             // 
+            // textBox8
+            // 
+            textBox8.Location = new Point(685, 496);
+            textBox8.Name = "textBox8";
+            textBox8.Size = new Size(125, 27);
+            textBox8.TabIndex = 49;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Microsoft Sans Serif", 11F, FontStyle.Bold, GraphicsUnit.Point);
+            label5.Location = new Point(540, 499);
+            label5.Margin = new Padding(2, 0, 2, 0);
+            label5.Name = "label5";
+            label5.Size = new Size(140, 24);
+            label5.TabIndex = 47;
+            label5.Text = "Total Amount:";
+            // 
+            // button3
+            // 
+            button3.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            button3.Location = new Point(540, 455);
+            button3.Name = "button3";
+            button3.Size = new Size(137, 30);
+            button3.TabIndex = 50;
+            button3.Text = "Calculate";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
+            // 
             // Salesitem
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.GradientInactiveCaption;
-            ClientSize = new Size(1003, 569);
+            ClientSize = new Size(1003, 623);
+            Controls.Add(button3);
+            Controls.Add(textBox8);
             Controls.Add(textBox7);
+            Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(textBox6);
             Controls.Add(label2);
@@ -422,8 +457,10 @@
         private DataGridView dataGridView2;
         private Label label2;
         private TextBox textBox6;
-        private Label label3;
         private Label label4;
         private TextBox textBox7;
+        private TextBox textBox8;
+        private Label label5;
+        private Button button3;
     }
 }

@@ -113,6 +113,7 @@ namespace shop
         {
             textBox3.Text = DateTime.Now.ToString("M-d-h-m-s");
             bool ss1 = false;
+
             try
             {
 
@@ -129,7 +130,8 @@ namespace shop
                                 + textBox4.Text + "','" + textBox3.Text + "','" + comboBox3.Text + "','" + textBox6.Text + "','" + textBox7.Text + "')");
 
                     CommonHealthPostConfigClass.MainHealthPostDatabase.ExecuteQuery(Queries:
-                        "Update[dbo].[purchase] SET Sell_qty='"+ Convert.ToInt32(dataGridView1.Rows[i].Cells[2].Value) + "' where Item_Name='"+ dataGridView1.Rows[i].Cells[0].Value.ToString() + "'");
+                        "Update[dbo].[purchase] SET Sell_qty='" + Convert.ToInt32(dataGridView1.Rows[i].Cells[2].Value) + "' where Item_Name='" + dataGridView1.Rows[i].Cells[0].Value.ToString() + "'");
+
                 }
             }
             catch (Exception ex)
@@ -144,6 +146,7 @@ namespace shop
 
                 }
             }
+            MessageBox.Show("Saved! Do you want to print!");
 
         }
 
@@ -169,6 +172,7 @@ namespace shop
             textBox13.Text = "";
             comboBox1.Text = "";
             textBox1.TabIndex = 0;
+            textBox2.Text = "";
         }
 
         private void textBox1_DisplayMemberChanged(object sender, EventArgs e)
@@ -226,7 +230,7 @@ namespace shop
             }
 
             // only allow one decimal point
-            
+
         }
 
         private void textBox14_KeyPress(object sender, KeyPressEventArgs e)
@@ -278,6 +282,22 @@ namespace shop
         private void label1_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            int Totalamt = 0;
+            for (int i = 0; i < dataGridView1.Rows.Count - 1; i++)
+            {
+                Totalamt = Totalamt + Convert.ToInt32(dataGridView1.Rows[i].Cells[4].Value);
+
+
+            }
+            textBox8.Text = Totalamt.ToString();
+            // string perc = textBox10.Text.ToString();
+            //int payamt = (Convert.ToInt16( perc)*Convert.ToInt16(Totalamt))/100;
+            //textBox12.Text= payamt.ToString(); 
+            //add percentage and payamount 
         }
     }
 }

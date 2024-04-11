@@ -172,5 +172,11 @@ namespace shop
         {
 
         }
+
+        private void oLDToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string imagePath = @"E:\project\shop\Resources\bg.jpg";
+            this.BackgroundImage = Image.FromFile(imagePath);
+        }
     }
 }
