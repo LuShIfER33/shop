@@ -54,7 +54,6 @@
             dataGridView2 = new DataGridView();
             label2 = new Label();
             textBox6 = new TextBox();
-            label3 = new Label();
             label4 = new Label();
             textBox7 = new TextBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -222,7 +221,7 @@
             label11.AutoSize = true;
             label11.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             label11.ForeColor = SystemColors.ControlText;
-            label11.Location = new Point(721, 7);
+            label11.Location = new Point(691, 10);
             label11.Name = "label11";
             label11.Size = new Size(89, 23);
             label11.TabIndex = 40;
@@ -297,6 +296,7 @@
             // 
             textBox2.BackColor = SystemColors.Control;
             textBox2.Enabled = false;
+            textBox2.ForeColor = Color.Red;
             textBox2.Location = new Point(171, 42);
             textBox2.Name = "textBox2";
             textBox2.ReadOnly = true;
@@ -310,7 +310,7 @@
             dataGridView2.BackgroundColor = SystemColors.ActiveCaption;
             dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView2.GridColor = Color.Black;
-            dataGridView2.Location = new Point(73, 452);
+            dataGridView2.Location = new Point(22, 455);
             dataGridView2.Name = "dataGridView2";
             dataGridView2.RowHeadersWidth = 51;
             dataGridView2.RowTemplate.Height = 29;
@@ -339,16 +339,6 @@
             textBox6.Size = new Size(208, 27);
             textBox6.TabIndex = 45;
             // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(0, 0);
-            label3.Margin = new Padding(2, 0, 2, 0);
-            label3.Name = "label3";
-            label3.Size = new Size(50, 20);
-            label3.TabIndex = 46;
-            label3.Text = "label3";
-            // 
             // label4
             // 
             label4.AutoSize = true;
@@ -373,10 +363,9 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.GradientInactiveCaption;
-            ClientSize = new Size(1003, 575);
+            ClientSize = new Size(1003, 569);
             Controls.Add(textBox7);
             Controls.Add(label4);
-            Controls.Add(label3);
             Controls.Add(textBox6);
             Controls.Add(label2);
             Controls.Add(dataGridView2);

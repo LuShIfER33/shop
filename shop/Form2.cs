@@ -1,16 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace shop
+﻿namespace shop
 {
     public partial class Form2 : Form
     {
@@ -102,17 +90,15 @@ namespace shop
 
         private void button1_Click(object sender, EventArgs e)
         {
-            bool sl = false;
-            int totalcp = 0;
-            int totalsp = 0;
+            bool sls = false;
             try
             {
 
                 for (int i = 0; i < dataGridView1.Rows.Count - 1; i++)
                 {
 
-                    sl = CommonHealthPostConfigClass.MainHealthPostDatabase.ExecuteQuery(Queries:
-                                "INSERT INTO [dbo].[purchase]( Item_Name,Batch_No,Exp_Date,Quantity,Unit,Rate,MRP,Curr_Stock,Return_qty,Sell_qty ,Bill_No,Bill_Date,Entry_Date,Supplier,Pay_Type VALUES ('"
+                    sls = CommonHealthPostConfigClass.MainHealthPostDatabase.ExecuteQuery(Queries:
+                                "INSERT INTO [dbo].[purchase]( Item_Name,Batch_No,Exp_Date,Quantity,Unit,Rate,MRP,Curr_Stock,Return_qty,Bill_No,Bill_Date,Entry_Date,Supplier,Pay_Type) VALUES ('"
                                 + dataGridView1.Rows[i].Cells[0].Value.ToString() + "','"
                                 + dataGridView1.Rows[i].Cells[1].Value.ToString() + "','"
                                 + Convert.ToString(dataGridView1.Rows[i].Cells[2].Value) + "',"
@@ -122,8 +108,9 @@ namespace shop
                                 + Convert.ToInt32(dataGridView1.Rows[i].Cells[6].Value) + ","
                                 + Convert.ToInt32(dataGridView1.Rows[i].Cells[3].Value) + ","
                                 + Convert.ToInt32(dataGridView1.Rows[i].Cells[3].Value) + ","
+                                
                                 + textBox3.Text + "," + dateTimePicker2.Text + "," + textBox4.Text + ",'" + comboBox2.Text + "','" + comboBox3.Text + "')");
-
+                    MessageBox.Show("Transaction Complete");
 
                     //totalcp =+ Convert.ToInt32(dataGridView1.Rows[i].Cells[5].Value);
                     //textBox6.Text=totalcp.ToString();
@@ -134,7 +121,7 @@ namespace shop
             }
             catch (Exception ex)
             {
-                if (sl = true)
+                if (true)
                 {
                     MessageBox.Show("Successful ");
                 }
