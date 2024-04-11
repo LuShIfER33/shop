@@ -18,6 +18,7 @@ namespace shop
         {
             InitializeComponent();
 
+
             textBox3.Text = DateTime.Now.ToString("M-d-h-m-s");
             textBox4.Text = DateTime.Today.ToString("yyyy-MM-dd");
 
@@ -225,10 +226,7 @@ namespace shop
             }
 
             // only allow one decimal point
-            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
-            {
-                e.Handled = true;
-            }
+            
         }
 
         private void textBox14_KeyPress(object sender, KeyPressEventArgs e)
@@ -243,17 +241,7 @@ namespace shop
 
         private void textBox13_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
-        (e.KeyChar != '.'))
-            {
-                e.Handled = true;
-            }
 
-            // only allow one decimal point
-            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
-            {
-                e.Handled = true;
-            }
         }
 
         private void textBox9_TextChanged(object sender, EventArgs e)
