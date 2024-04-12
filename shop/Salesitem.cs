@@ -117,20 +117,20 @@ namespace shop
             try
             {
 
-                for (int i = 0; i < dataGridView1.Rows.Count - 1; i++)
+                for (int s = 0; s < dataGridView1.Rows.Count - 1; s++)
                 {
 
                     ss1 = CommonHealthPostConfigClass.MainHealthPostDatabase.ExecuteQuery(Queries:
                                 "INSERT INTO [dbo].[salesItem] (item,batch,qty,unit,rate,todaydate,billno,paytype,BuyerName,BuyerContact) VALUES ('"
-                                + dataGridView1.Rows[i].Cells[0].Value.ToString() + "','"
-                                + Convert.ToInt32(dataGridView1.Rows[i].Cells[1].Value) + "','"
-                                + Convert.ToInt32(dataGridView1.Rows[i].Cells[2].Value) + "','"
-                                + dataGridView1.Rows[i].Cells[3].Value.ToString() + "','"
-                                + Convert.ToInt32(dataGridView1.Rows[i].Cells[4].Value) + "','"
+                                + dataGridView1.Rows[s].Cells[0].Value.ToString() + "','"
+                                + Convert.ToInt32(dataGridView1.Rows[s].Cells[1].Value) + "','"
+                                + Convert.ToInt32(dataGridView1.Rows[s].Cells[2].Value) + "','"
+                                + dataGridView1.Rows[s].Cells[3].Value.ToString() + "','"
+                                + Convert.ToInt32(dataGridView1.Rows[s].Cells[4].Value) + "','"
                                 + textBox4.Text + "','" + textBox3.Text + "','" + comboBox3.Text + "','" + textBox6.Text + "','" + textBox7.Text + "')");
 
                     CommonHealthPostConfigClass.MainHealthPostDatabase.ExecuteQuery(Queries:
-                        "Update[dbo].[purchase] SET Sell_qty='" + Convert.ToInt32(dataGridView1.Rows[i].Cells[2].Value) + "' where Item_Name='" + dataGridView1.Rows[i].Cells[0].Value.ToString() + "'");
+                        "Update[dbo].[purchase] SET Sell_qty='" + Convert.ToInt32(dataGridView1.Rows[s].Cells[2].Value) + "' where Item_Name='" + dataGridView1.Rows[s].Cells[0].Value.ToString() + "'");
 
                 }
             }
