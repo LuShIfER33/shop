@@ -118,6 +118,8 @@
             Controls.Add(textBox2);
             Controls.Add(dataGridView1);
             Controls.Add(groupBox1);
+            FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            MaximizeBox = false;
             Name = "unit";
             Text = "unit";
             Load += unit_Load;

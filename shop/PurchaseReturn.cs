@@ -104,8 +104,8 @@ namespace shop
             bool ex1 = false;
             try
             {
-                int remstock= Convert.ToInt32(this.textBox4.Text);
-                if (remstock >0)
+                int remstock = Convert.ToInt32(this.textBox4.Text);
+                if (remstock > 0)
                 {
                     ex1 = CommonHealthPostConfigClass.MainHealthPostDatabase.ExecuteQuery(Queries: "Update dbo.purchase Set Return_qty =" + textBox2.Text + " WHERE Item_Name='" + comboBox1.Text + "' and Bill_No=" + textBox1.Text + "");
                     CommonHealthPostConfigClass.MainHealthPostDatabase.ExecuteQuery(Queries: "Update dbo.purchase Set Curr_Stock =" + textBox5.Text + " WHERE Item_Name='" + comboBox1.Text + "' and Bill_No=" + textBox1.Text + "");
@@ -117,18 +117,18 @@ namespace shop
                 }
 
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             };
-            
+
         }
 
         private void textBox2_Leave(object sender, EventArgs e)
         {
-            int a=Convert.ToInt32(this.textBox2.Text);
-            int b=Convert.ToInt32(this.textBox4.Text);
-            textBox5.Text =Convert.ToString( b-a);
+            int a = Convert.ToInt32(this.textBox2.Text);
+            int b = Convert.ToInt32(this.textBox4.Text);
+            textBox5.Text = Convert.ToString(b - a);
         }
     }
 }

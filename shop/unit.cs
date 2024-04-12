@@ -23,7 +23,7 @@ namespace shop
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
@@ -85,7 +85,7 @@ namespace shop
 
 
             }
-            textBox1.Text = null;           
+            textBox1.Text = null;
         }
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)

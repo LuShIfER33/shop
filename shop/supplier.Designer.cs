@@ -188,6 +188,7 @@
             ClientSize = new Size(800, 450);
             Controls.Add(dataGridView1);
             Controls.Add(groupBox1);
+            FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Name = "supplier";
             Text = "supplier";
             Load += supplier_Load;

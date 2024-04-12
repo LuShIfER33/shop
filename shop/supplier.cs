@@ -44,7 +44,7 @@ namespace shop
 
 
             }
-            textBox1.Text = null; textBox2.Text=null; textBox3.Text=null;
+            textBox1.Text = null; textBox2.Text = null; textBox3.Text = null;
         }
 
         private void label2_Click(object sender, EventArgs e)

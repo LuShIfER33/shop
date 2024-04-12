@@ -125,21 +125,21 @@
             // 
             purchaseToolStripMenuItem.BackColor = SystemColors.ActiveCaption;
             purchaseToolStripMenuItem.Name = "purchaseToolStripMenuItem";
-            purchaseToolStripMenuItem.Size = new Size(224, 32);
+            purchaseToolStripMenuItem.Size = new Size(175, 32);
             purchaseToolStripMenuItem.Text = "Purchase";
             purchaseToolStripMenuItem.Click += purchaseToolStripMenuItem_Click;
             // 
             // returnToolStripMenuItem
             // 
             returnToolStripMenuItem.Name = "returnToolStripMenuItem";
-            returnToolStripMenuItem.Size = new Size(224, 32);
+            returnToolStripMenuItem.Size = new Size(175, 32);
             returnToolStripMenuItem.Text = "Return";
             returnToolStripMenuItem.Click += returnToolStripMenuItem_Click;
             // 
             // damageToolStripMenuItem
             // 
             damageToolStripMenuItem.Name = "damageToolStripMenuItem";
-            damageToolStripMenuItem.Size = new Size(224, 32);
+            damageToolStripMenuItem.Size = new Size(175, 32);
             damageToolStripMenuItem.Text = "Damage";
             damageToolStripMenuItem.Click += damageToolStripMenuItem_Click;
             // 
@@ -155,14 +155,14 @@
             // itemToolStripMenuItem
             // 
             itemToolStripMenuItem.Name = "itemToolStripMenuItem";
-            itemToolStripMenuItem.Size = new Size(224, 32);
+            itemToolStripMenuItem.Size = new Size(218, 32);
             itemToolStripMenuItem.Text = "Item sells";
             itemToolStripMenuItem.Click += itemToolStripMenuItem_Click;
             // 
             // itemToolStripMenuItem1
             // 
             itemToolStripMenuItem1.Name = "itemToolStripMenuItem1";
-            itemToolStripMenuItem1.Size = new Size(224, 32);
+            itemToolStripMenuItem1.Size = new Size(218, 32);
             itemToolStripMenuItem1.Text = "Return";
             itemToolStripMenuItem1.Click += itemToolStripMenuItem1_Click;
             // 

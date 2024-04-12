@@ -171,6 +171,7 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(button1);
+            FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "UserAuthentication";
             Text = "UserAuthentication";

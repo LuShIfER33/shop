@@ -83,7 +83,7 @@
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(957, 277);
+            dataGridView1.Size = new Size(682, 277);
             dataGridView1.TabIndex = 41;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
@@ -266,7 +266,7 @@
             // 
             button1.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             button1.ForeColor = SystemColors.ControlText;
-            button1.Location = new Point(833, 573);
+            button1.Location = new Point(811, 557);
             button1.Name = "button1";
             button1.Size = new Size(146, 38);
             button1.TabIndex = 33;
@@ -363,7 +363,7 @@
             // 
             // textBox8
             // 
-            textBox8.Location = new Point(685, 496);
+            textBox8.Location = new Point(854, 315);
             textBox8.Name = "textBox8";
             textBox8.Size = new Size(125, 27);
             textBox8.TabIndex = 49;
@@ -372,7 +372,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Microsoft Sans Serif", 11F, FontStyle.Bold, GraphicsUnit.Point);
-            label5.Location = new Point(540, 499);
+            label5.Location = new Point(719, 318);
             label5.Margin = new Padding(2, 0, 2, 0);
             label5.Name = "label5";
             label5.Size = new Size(140, 24);
@@ -382,7 +382,7 @@
             // button3
             // 
             button3.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            button3.Location = new Point(540, 455);
+            button3.Location = new Point(722, 259);
             button3.Name = "button3";
             button3.Size = new Size(137, 30);
             button3.TabIndex = 50;
@@ -416,6 +416,7 @@
             Controls.Add(button1);
             Controls.Add(textBox3);
             ForeColor = SystemColors.Desktop;
+            FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Name = "Salesitem";
             Text = "Salesitem";
             Load += Salesitem_Load;

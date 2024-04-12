@@ -147,7 +147,11 @@ namespace shop
                 }
             }
             MessageBox.Show("Saved! Do you want to print!");
-
+            dataGridView1.DataSource = null;
+            dataGridView1.Rows.Clear();
+            textBox6.Text = "";
+            textBox7.Text = "";
+            textBox8.Text = "";
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

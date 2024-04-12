@@ -125,6 +125,7 @@
             Controls.Add(textBox2);
             Controls.Add(groupBox1);
             Controls.Add(dataGridView1);
+            FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Name = "items";
             Text = "items";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();

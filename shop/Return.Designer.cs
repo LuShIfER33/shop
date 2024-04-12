@@ -216,6 +216,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(569, 446);
             Controls.Add(groupBox1);
+            FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Name = "Return";
             Text = "Return";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();

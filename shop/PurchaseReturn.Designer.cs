@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             groupBox1 = new GroupBox();
+            label6 = new Label();
+            textBox5 = new TextBox();
+            label5 = new Label();
             textBox4 = new TextBox();
             dataGridView1 = new DataGridView();
             returnsubmit = new Button();
@@ -41,9 +44,6 @@
             textBox2 = new TextBox();
             textBox1 = new TextBox();
             button1 = new Button();
-            label5 = new Label();
-            textBox5 = new TextBox();
-            label6 = new Label();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -71,6 +71,34 @@
             groupBox1.Size = new Size(604, 375);
             groupBox1.TabIndex = 5;
             groupBox1.TabStop = false;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(287, 322);
+            label6.Name = "label6";
+            label6.Size = new Size(83, 20);
+            label6.TabIndex = 8;
+            label6.Text = "Remaning :";
+            // 
+            // textBox5
+            // 
+            textBox5.BackColor = SystemColors.InactiveCaption;
+            textBox5.Font = new Font("Segoe UI", 10.2F, FontStyle.Italic, GraphicsUnit.Point);
+            textBox5.ForeColor = Color.Red;
+            textBox5.Location = new Point(299, 345);
+            textBox5.Name = "textBox5";
+            textBox5.Size = new Size(58, 30);
+            textBox5.TabIndex = 7;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(215, 322);
+            label5.Name = "label5";
+            label5.Size = new Size(49, 20);
+            label5.TabIndex = 8;
+            label5.Text = "Total :";
             // 
             // textBox4
             // 
@@ -198,40 +226,13 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Location = new Point(215, 322);
-            label5.Name = "label5";
-            label5.Size = new Size(49, 20);
-            label5.TabIndex = 8;
-            label5.Text = "Total :";
-            // 
-            // textBox5
-            // 
-            textBox5.BackColor = SystemColors.InactiveCaption;
-            textBox5.Font = new Font("Segoe UI", 10.2F, FontStyle.Italic, GraphicsUnit.Point);
-            textBox5.ForeColor = Color.Red;
-            textBox5.Location = new Point(299, 345);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(58, 30);
-            textBox5.TabIndex = 7;
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Location = new Point(287, 322);
-            label6.Name = "label6";
-            label6.Size = new Size(83, 20);
-            label6.TabIndex = 8;
-            label6.Text = "Remaning :";
-            // 
             // PurchaseReturn
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(598, 373);
             Controls.Add(groupBox1);
+            FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Name = "PurchaseReturn";
             Text = "PurchaseReturn";
             groupBox1.ResumeLayout(false);

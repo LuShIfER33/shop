@@ -250,6 +250,7 @@
             Controls.Add(label1);
             Controls.Add(groupBox2);
             ForeColor = Color.DarkBlue;
+            FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Name = "DamageNR";
             Text = "Damage";
             Load += DamageNR_Load;
