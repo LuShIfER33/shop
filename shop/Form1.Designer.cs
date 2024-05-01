@@ -176,13 +176,14 @@
             // specificToolStripMenuItem
             // 
             specificToolStripMenuItem.Name = "specificToolStripMenuItem";
-            specificToolStripMenuItem.Size = new Size(165, 32);
+            specificToolStripMenuItem.Size = new Size(224, 32);
             specificToolStripMenuItem.Text = "Specific";
+            specificToolStripMenuItem.Click += specificToolStripMenuItem_Click;
             // 
             // entireToolStripMenuItem
             // 
             entireToolStripMenuItem.Name = "entireToolStripMenuItem";
-            entireToolStripMenuItem.Size = new Size(165, 32);
+            entireToolStripMenuItem.Size = new Size(224, 32);
             entireToolStripMenuItem.Text = "Overall";
             // 
             // settingsToolStripMenuItem
@@ -288,7 +289,7 @@
             Controls.Add(statusStrip1);
             Controls.Add(menuStrip1);
             Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            ForeColor = Color.Orange;
+            ForeColor = SystemColors.ActiveCaptionText;
             Icon = (Icon)resources.GetObject("$this.Icon");
             IsMdiContainer = true;
             MainMenuStrip = menuStrip1;

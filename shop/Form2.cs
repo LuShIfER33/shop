@@ -108,7 +108,7 @@
                                 + Convert.ToInt32(dataGridView1.Rows[i].Cells[6].Value) + ","
                                 + Convert.ToInt32(dataGridView1.Rows[i].Cells[3].Value) + ","
                                 + Convert.ToInt32(dataGridView1.Rows[i].Cells[3].Value) + ","
-                                
+
                                 + textBox3.Text + "," + dateTimePicker2.Text + "," + textBox4.Text + ",'" + comboBox2.Text + "','" + comboBox3.Text + "')");
                     MessageBox.Show("Transaction Complete");
 

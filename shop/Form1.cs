@@ -178,5 +178,11 @@ namespace shop
             string imagePath = @"E:\project\shop\Resources\bg.jpg";
             this.BackgroundImage = Image.FromFile(imagePath);
         }
+
+        private void specificToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SalesReport obj = new SalesReport();
+            obj.Show();
+        }
     }
 }
