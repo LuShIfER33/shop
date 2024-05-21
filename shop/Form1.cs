@@ -181,8 +181,7 @@ namespace shop
 
         private void specificToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            SalesReport obj = new SalesReport();
-            obj.Show();
+          
         }
     }
 }

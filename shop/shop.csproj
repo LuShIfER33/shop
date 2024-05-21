@@ -10,33 +10,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <COMReference Include="CrystalReportViewerExportLib">
-      <WrapperTool>tlbimp</WrapperTool>
-      <VersionMinor>0</VersionMinor>
-      <VersionMajor>13</VersionMajor>
-      <Guid>5c21a516-c6ac-42f2-a7b7-846ffe1b122a</Guid>
-      <Lcid>0</Lcid>
-      <Isolated>false</Isolated>
-      <EmbedInteropTypes>true</EmbedInteropTypes>
-    </COMReference>
-    <COMReference Include="CrystalActiveXReportViewerLib13">
-      <WrapperTool>tlbimp</WrapperTool>
-      <VersionMinor>0</VersionMinor>
-      <VersionMajor>13</VersionMajor>
-      <Guid>b816e96d-d151-4000-badb-53a2d8f3fc65</Guid>
-      <Lcid>0</Lcid>
-      <Isolated>false</Isolated>
-      <EmbedInteropTypes>true</EmbedInteropTypes>
-    </COMReference>
-    <COMReference Include="CrystalReportViewerWebReportSourceLib">
-      <WrapperTool>tlbimp</WrapperTool>
-      <VersionMinor>0</VersionMinor>
-      <VersionMajor>13</VersionMajor>
-      <Guid>14173ba7-071d-4216-8c9b-eab29a55e2d4</Guid>
-      <Lcid>0</Lcid>
-      <Isolated>false</Isolated>
-      <EmbedInteropTypes>true</EmbedInteropTypes>
-    </COMReference>
     <COMReference Include="CrystalAnalysisCommonControlsLib">
       <WrapperTool>tlbimp</WrapperTool>
       <VersionMinor>0</VersionMinor>
@@ -87,15 +60,6 @@
       <VersionMinor>0</VersionMinor>
       <VersionMajor>1</VersionMajor>
       <Guid>5df0757c-75a4-4227-af7b-0479fc6e7a55</Guid>
-      <Lcid>0</Lcid>
-      <Isolated>false</Isolated>
-      <EmbedInteropTypes>true</EmbedInteropTypes>
-    </COMReference>
-    <COMReference Include="EMFGENLib">
-      <WrapperTool>tlbimp</WrapperTool>
-      <VersionMinor>0</VersionMinor>
-      <VersionMajor>13</VersionMajor>
-      <Guid>c097b4cf-2cea-442f-b025-610d2b0c05c8</Guid>
       <Lcid>0</Lcid>
       <Isolated>false</Isolated>
       <EmbedInteropTypes>true</EmbedInteropTypes>
@@ -154,12 +118,6 @@
       <Isolated>false</Isolated>
       <EmbedInteropTypes>true</EmbedInteropTypes>
     </COMReference>
-    <COMReference Include="{6ae44ff1-eccf-4a72-96ce-95bcd1ea2097}">
-      <WrapperTool>tlbimp</WrapperTool>
-      <VersionMinor>0</VersionMinor>
-      <VersionMajor>13</VersionMajor>
-      <Guid>6ae44ff1-eccf-4a72-96ce-95bcd1ea2097</Guid>
-    </COMReference>
     <COMReference Include="CrystalReportsObjectFactoryLib">
       <WrapperTool>tlbimp</WrapperTool>
       <VersionMinor>0</VersionMinor>
@@ -178,29 +136,11 @@
       <Isolated>false</Isolated>
       <EmbedInteropTypes>true</EmbedInteropTypes>
     </COMReference>
-    <COMReference Include="CRReportPromptEMFLib">
-      <WrapperTool>tlbimp</WrapperTool>
-      <VersionMinor>0</VersionMinor>
-      <VersionMajor>13</VersionMajor>
-      <Guid>7a4e36dc-a11a-4caf-bc2a-700ecc668fd6</Guid>
-      <Lcid>0</Lcid>
-      <Isolated>false</Isolated>
-      <EmbedInteropTypes>true</EmbedInteropTypes>
-    </COMReference>
     <COMReference Include="CrystalReportsReportDefModelLib">
       <WrapperTool>tlbimp</WrapperTool>
       <VersionMinor>0</VersionMinor>
       <VersionMajor>1</VersionMajor>
       <Guid>bf40b97d-06ea-4ab1-91de-18cb29a2b25a</Guid>
-      <Lcid>0</Lcid>
-      <Isolated>false</Isolated>
-      <EmbedInteropTypes>true</EmbedInteropTypes>
-    </COMReference>
-    <COMReference Include="CRREPORTSOURCEBRIDGELib">
-      <WrapperTool>tlbimp</WrapperTool>
-      <VersionMinor>0</VersionMinor>
-      <VersionMajor>13</VersionMajor>
-      <Guid>80f19574-9245-4dfa-a0a6-8a21874282d3</Guid>
       <Lcid>0</Lcid>
       <Isolated>false</Isolated>
       <EmbedInteropTypes>true</EmbedInteropTypes>
@@ -213,12 +153,6 @@
       <Lcid>0</Lcid>
       <Isolated>false</Isolated>
       <EmbedInteropTypes>true</EmbedInteropTypes>
-    </COMReference>
-    <COMReference Include="{c0aa5023-c763-4a4b-afed-adcf78d6c08b}">
-      <WrapperTool>tlbimp</WrapperTool>
-      <VersionMinor>0</VersionMinor>
-      <VersionMajor>13</VersionMajor>
-      <Guid>c0aa5023-c763-4a4b-afed-adcf78d6c08b</Guid>
     </COMReference>
     <COMReference Include="CrystalReportsCommonObjectModelLib">
       <WrapperTool>tlbimp</WrapperTool>
