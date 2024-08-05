@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.Windows.Forms;
 
 namespace shop
 {
@@ -27,22 +28,26 @@ namespace shop
 
         private void button2_Click_1(object sender, EventArgs e)
         {
+            login(textBox3.Text, textBox2.Text, comboBox1.Text);
+        }
+        public void login(string username, string password, string depart)
+        {
             DataTable dt;
             dt = CommonHealthPostConfigClass.MainHealthPostDatabase.LoadSqlData("SELECT UserId  FROM [MeroPasal].[dbo].[UserLogin]");
-            string authorToFind = textBox3.Text;
+            string authorToFind = username;
             bool exists = dt.AsEnumerable().Any(row => row.Field<string>("UserId") == authorToFind);
 
             if (exists)
             {
                 DataTable dt1;
                 dt1 = CommonHealthPostConfigClass.MainHealthPostDatabase.LoadSqlData("SELECT Password  FROM [MeroPasal].[dbo].[UserLogin]");
-                string authorToFind1 = textBox2.Text;
+                string authorToFind1 = password;
                 bool exists1 = dt1.AsEnumerable().Any(row => row.Field<string>("Password") == authorToFind1);
                 if (exists1)
                 {
                     DataTable dt2;
                     dt2 = CommonHealthPostConfigClass.MainHealthPostDatabase.LoadSqlData("SELECT Department  FROM [MeroPasal].[dbo].[UserLogin]");
-                    string authorToFind2 = comboBox1.Text;
+                    string authorToFind2 = depart;
                     bool exists2 = dt2.AsEnumerable().Any(row => row.Field<string>("Department") == authorToFind2);
                     if (exists2)
                     {
@@ -76,6 +81,79 @@ namespace shop
         {
 
         }
+
+        private void UserAuthentication_KeyDown(object sender, KeyEventArgs e)
+        {
+        }
+
+        private void button2_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                textBox1.Visible = true;
+                textBox1.Enabled = true;
+                label5.Visible = true;
+                label5.Enabled = true;
+            }
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+            textBox1.Visible = true;
+            textBox1.Enabled = true;
+            label5.Visible = true;
+            label5.Enabled = true;
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox3_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                textBox2.Focus();
+            }
+        }
+
+        private void textBox2_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                comboBox1.Focus();
+            }
+        }
+
+        private void comboBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                button2.Focus();
+            }
+        }
+
+        private void button2_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                login(textBox3.Text, textBox2.Text, comboBox1.Text);
+            }
+        }
+
+        //private void button3_Click(object sender, EventArgs e)
+        //{
+        //}
+
+        //private void button4_Click(object sender, EventArgs e)
+        //{
+        //}
     }
 }
 

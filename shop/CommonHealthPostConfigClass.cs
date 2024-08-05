@@ -17,9 +17,9 @@ public  static class CommonHealthPostConfigClass
     {
 
 
-        ServerNameAddress = "database.heartsun.com.np,2155",
-        ServerLoginUID = "Maskey",
-    ServerLoginPassword = "Maskey",
+        ServerNameAddress = "SULAV\\SQLEXPRESS",
+        ServerLoginUID = "sulav",
+    ServerLoginPassword = "12345",
         CompanyDatabase = "MeroPasal"
 
         //ServerNameAddress = AllFunctionsCommomnClass.GetXmlDocumentNodeValue(FilePath:ServerSettingsXMLFilePath,TagName:"ServerNameAddress"),
