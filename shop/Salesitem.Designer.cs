@@ -59,7 +59,6 @@
             textBox8 = new TextBox();
             label5 = new Label();
             button3 = new Button();
-            button4 = new Button();
             button5 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             groupBox1.SuspendLayout();
@@ -151,6 +150,7 @@
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(189, 36);
             textBox1.TabIndex = 32;
+            textBox1.SelectedIndexChanged += textBox1_SelectedIndexChanged;
             textBox1.DisplayMemberChanged += textBox1_DisplayMemberChanged;
             textBox1.FontChanged += textBox1_FontChanged;
             textBox1.Enter += textBox1_Enter;
@@ -392,15 +392,6 @@
             button3.UseVisualStyleBackColor = true;
             button3.Click += button3_Click;
             // 
-            // button4
-            // 
-            button4.Location = new Point(0, 0);
-            button4.Name = "button4";
-            button4.Size = new Size(94, 29);
-            button4.TabIndex = 51;
-            button4.Text = "button4";
-            button4.UseVisualStyleBackColor = true;
-            // 
             // button5
             // 
             button5.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
@@ -418,7 +409,6 @@
             BackColor = SystemColors.GradientInactiveCaption;
             ClientSize = new Size(1003, 623);
             Controls.Add(button5);
-            Controls.Add(button4);
             Controls.Add(button3);
             Controls.Add(textBox8);
             Controls.Add(textBox7);
@@ -486,7 +476,6 @@
         private TextBox textBox8;
         private Label label5;
         private Button button3;
-        private Button button4;
         private Button button5;
     }
 }

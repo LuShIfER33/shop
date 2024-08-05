@@ -181,7 +181,7 @@ namespace shop
 
         private void specificToolStripMenuItem_Click(object sender, EventArgs e)
         {
-          
+
         }
     }
 }

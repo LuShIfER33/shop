@@ -176,14 +176,14 @@
             // specificToolStripMenuItem
             // 
             specificToolStripMenuItem.Name = "specificToolStripMenuItem";
-            specificToolStripMenuItem.Size = new Size(224, 32);
+            specificToolStripMenuItem.Size = new Size(165, 32);
             specificToolStripMenuItem.Text = "Specific";
             specificToolStripMenuItem.Click += specificToolStripMenuItem_Click;
             // 
             // entireToolStripMenuItem
             // 
             entireToolStripMenuItem.Name = "entireToolStripMenuItem";
-            entireToolStripMenuItem.Size = new Size(224, 32);
+            entireToolStripMenuItem.Size = new Size(165, 32);
             entireToolStripMenuItem.Text = "Overall";
             // 
             // settingsToolStripMenuItem
@@ -196,7 +196,7 @@
             // userToolStripMenuItem
             // 
             userToolStripMenuItem.Name = "userToolStripMenuItem";
-            userToolStripMenuItem.Size = new Size(187, 32);
+            userToolStripMenuItem.Size = new Size(224, 32);
             userToolStripMenuItem.Text = "User";
             userToolStripMenuItem.Click += userToolStripMenuItem_Click;
             // 
@@ -204,27 +204,27 @@
             // 
             wallpaperToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { darkToolStripMenuItem, lightToolStripMenuItem, oLDToolStripMenuItem });
             wallpaperToolStripMenuItem.Name = "wallpaperToolStripMenuItem";
-            wallpaperToolStripMenuItem.Size = new Size(187, 32);
+            wallpaperToolStripMenuItem.Size = new Size(224, 32);
             wallpaperToolStripMenuItem.Text = "Wallpaper";
             // 
             // darkToolStripMenuItem
             // 
             darkToolStripMenuItem.Name = "darkToolStripMenuItem";
-            darkToolStripMenuItem.Size = new Size(221, 32);
+            darkToolStripMenuItem.Size = new Size(224, 32);
             darkToolStripMenuItem.Text = "Dark";
             darkToolStripMenuItem.Click += darkToolStripMenuItem_Click;
             // 
             // lightToolStripMenuItem
             // 
             lightToolStripMenuItem.Name = "lightToolStripMenuItem";
-            lightToolStripMenuItem.Size = new Size(221, 32);
+            lightToolStripMenuItem.Size = new Size(224, 32);
             lightToolStripMenuItem.Text = "Light";
             lightToolStripMenuItem.Click += lightToolStripMenuItem_Click;
             // 
             // oLDToolStripMenuItem
             // 
             oLDToolStripMenuItem.Name = "oLDToolStripMenuItem";
-            oLDToolStripMenuItem.Size = new Size(221, 32);
+            oLDToolStripMenuItem.Size = new Size(224, 32);
             oLDToolStripMenuItem.Text = "V1 wallapaper";
             oLDToolStripMenuItem.Click += oLDToolStripMenuItem_Click;
             // 
@@ -252,6 +252,7 @@
             // 
             // logoutToolStripMenuItem2
             // 
+            logoutToolStripMenuItem2.Alignment = ToolStripItemAlignment.Right;
             logoutToolStripMenuItem2.Name = "logoutToolStripMenuItem2";
             logoutToolStripMenuItem2.Size = new Size(89, 32);
             logoutToolStripMenuItem2.Text = "Logout";

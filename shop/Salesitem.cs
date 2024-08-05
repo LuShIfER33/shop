@@ -303,5 +303,10 @@ namespace shop
             //textBox12.Text= payamt.ToString(); 
             //add percentage and payamount 
         }
+
+        private void textBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            dataGridView2.DataSource = CommonHealthPostConfigClass.MainHealthPostDatabase.LoadSqlData("select Item_Name,Quantity,Batch_No,Exp_Date,Rate,Unit From dbo.Purchase where Item_Name = '" + textBox1.Text + "'");
+        }
     }
 }
