@@ -57,9 +57,11 @@
             groupBox1.Controls.Add(label5);
             groupBox1.Controls.Add(textBox1);
             groupBox1.Controls.Add(pictureBox1);
-            groupBox1.Location = new Point(12, 4);
+            groupBox1.Location = new Point(10, 3);
+            groupBox1.Margin = new Padding(3, 2, 3, 2);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(621, 279);
+            groupBox1.Padding = new Padding(3, 2, 3, 2);
+            groupBox1.Size = new Size(645, 282);
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             // 
@@ -68,9 +70,9 @@
             label6.Anchor = AnchorStyles.Top;
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
-            label6.Location = new Point(257, 0);
+            label6.Location = new Point(276, 0);
             label6.Name = "label6";
-            label6.Size = new Size(103, 25);
+            label6.Size = new Size(85, 20);
             label6.TabIndex = 15;
             label6.Text = "Mero Pasal";
             // 
@@ -87,9 +89,11 @@
             groupBox2.Controls.Add(label2);
             groupBox2.Controls.Add(label1);
             groupBox2.Controls.Add(button1);
-            groupBox2.Location = new Point(20, 23);
+            groupBox2.Location = new Point(18, 17);
+            groupBox2.Margin = new Padding(3, 2, 3, 2);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(387, 243);
+            groupBox2.Padding = new Padding(3, 2, 3, 2);
+            groupBox2.Size = new Size(441, 255);
             groupBox2.TabIndex = 14;
             groupBox2.TabStop = false;
             groupBox2.Enter += groupBox2_Enter;
@@ -98,9 +102,10 @@
             // 
             button2.BackColor = SystemColors.ActiveCaption;
             button2.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
-            button2.Location = new Point(246, 187);
+            button2.Location = new Point(265, 200);
+            button2.Margin = new Padding(3, 2, 3, 2);
             button2.Name = "button2";
-            button2.Size = new Size(125, 38);
+            button2.Size = new Size(135, 40);
             button2.TabIndex = 16;
             button2.Text = "Login 🔑";
             button2.UseVisualStyleBackColor = false;
@@ -111,38 +116,45 @@
             // 
             comboBox1.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
             comboBox1.AutoCompleteSource = AutoCompleteSource.ListItems;
+            comboBox1.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             comboBox1.FormattingEnabled = true;
             comboBox1.Items.AddRange(new object[] { "Admin", "Counter", "Account" });
-            comboBox1.Location = new Point(119, 140);
+            comboBox1.Location = new Point(104, 150);
+            comboBox1.Margin = new Padding(5);
             comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(252, 28);
+            comboBox1.Size = new Size(296, 33);
             comboBox1.TabIndex = 15;
             comboBox1.KeyDown += comboBox1_KeyDown;
             // 
             // dateTimePicker1
             // 
             dateTimePicker1.Enabled = false;
-            dateTimePicker1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dateTimePicker1.Location = new Point(119, 24);
+            dateTimePicker1.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            dateTimePicker1.Location = new Point(104, 18);
+            dateTimePicker1.Margin = new Padding(5);
             dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(252, 27);
+            dateTimePicker1.Size = new Size(296, 33);
             dateTimePicker1.TabIndex = 14;
             // 
             // textBox3
             // 
-            textBox3.Location = new Point(119, 59);
+            textBox3.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox3.Location = new Point(104, 60);
+            textBox3.Margin = new Padding(5);
             textBox3.Name = "textBox3";
-            textBox3.Size = new Size(252, 27);
+            textBox3.Size = new Size(296, 33);
             textBox3.TabIndex = 12;
             textBox3.TextChanged += textBox3_TextChanged;
             textBox3.KeyDown += textBox3_KeyDown;
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(119, 98);
+            textBox2.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox2.Location = new Point(104, 106);
+            textBox2.Margin = new Padding(5);
             textBox2.Name = "textBox2";
             textBox2.PasswordChar = '*';
-            textBox2.Size = new Size(252, 27);
+            textBox2.Size = new Size(296, 33);
             textBox2.TabIndex = 13;
             textBox2.KeyDown += textBox2_KeyDown;
             // 
@@ -150,9 +162,9 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            label4.Location = new Point(54, 24);
+            label4.Location = new Point(47, 29);
             label4.Name = "label4";
-            label4.Size = new Size(59, 25);
+            label4.Size = new Size(50, 20);
             label4.TabIndex = 8;
             label4.Text = "Date :";
             // 
@@ -160,9 +172,9 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            label3.Location = new Point(7, 142);
+            label3.Location = new Point(6, 158);
             label3.Name = "label3";
-            label3.Size = new Size(117, 25);
+            label3.Size = new Size(100, 20);
             label3.TabIndex = 9;
             label3.Text = "Department :";
             // 
@@ -170,9 +182,9 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            label2.Location = new Point(14, 97);
+            label2.Location = new Point(16, 114);
             label2.Name = "label2";
-            label2.Size = new Size(99, 25);
+            label2.Size = new Size(81, 20);
             label2.TabIndex = 10;
             label2.Text = "Password :";
             // 
@@ -180,9 +192,9 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            label1.Location = new Point(35, 59);
+            label1.Location = new Point(31, 68);
             label1.Name = "label1";
-            label1.Size = new Size(78, 25);
+            label1.Size = new Size(65, 20);
             label1.TabIndex = 11;
             label1.Text = "User Id :";
             // 
@@ -190,20 +202,22 @@
             // 
             button1.BackColor = SystemColors.ActiveCaption;
             button1.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.Location = new Point(88, 187);
+            button1.Location = new Point(97, 200);
+            button1.Margin = new Padding(3, 2, 3, 2);
             button1.Name = "button1";
-            button1.Size = new Size(125, 38);
+            button1.Size = new Size(135, 40);
             button1.TabIndex = 7;
             button1.Text = "Close ✖";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // label5
             // 
             label5.AutoSize = true;
             label5.Enabled = false;
-            label5.Location = new Point(481, 210);
+            label5.Location = new Point(518, 214);
             label5.Name = "label5";
-            label5.Size = new Size(89, 20);
+            label5.Size = new Size(71, 15);
             label5.TabIndex = 13;
             label5.Text = "Shop Code :";
             label5.Visible = false;
@@ -211,32 +225,36 @@
             // textBox1
             // 
             textBox1.Enabled = false;
-            textBox1.Location = new Point(420, 237);
+            textBox1.Location = new Point(465, 234);
+            textBox1.Margin = new Padding(3, 2, 3, 2);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(186, 27);
+            textBox1.Size = new Size(163, 23);
             textBox1.TabIndex = 12;
             textBox1.Visible = false;
             // 
             // pictureBox1
             // 
+            pictureBox1.BorderStyle = BorderStyle.FixedSingle;
             pictureBox1.ErrorImage = (Image)resources.GetObject("pictureBox1.ErrorImage");
             pictureBox1.Image = Properties.Resources._474595;
-            pictureBox1.Location = new Point(420, 32);
+            pictureBox1.Location = new Point(465, 26);
+            pictureBox1.Margin = new Padding(3, 2, 3, 2);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(186, 173);
+            pictureBox1.Size = new Size(163, 159);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 11;
             pictureBox1.TabStop = false;
             // 
             // UserAuthentication
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
-            ClientSize = new Size(644, 295);
+            ClientSize = new Size(667, 296);
             Controls.Add(groupBox1);
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Icon = (Icon)resources.GetObject("$this.Icon");
+            Margin = new Padding(3, 2, 3, 2);
             Name = "UserAuthentication";
             Text = "UserAuthentication";
             Load += UserAuthentication_Load;

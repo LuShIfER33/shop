@@ -18,6 +18,10 @@ namespace shop
         public UserAuthentication()
         {
             InitializeComponent();
+            textBox3.TabIndex = 0;
+            textBox2.TabIndex = 1;
+            comboBox1.TabIndex = 2;
+            button2.TabIndex = 3;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -28,7 +32,9 @@ namespace shop
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            login(textBox3.Text, textBox2.Text, comboBox1.Text);
+            string username = AesOperation.EncryptString(textBox3.Text);
+            string password = AesOperation.EncryptString(textBox2.Text);
+            login(username, password, comboBox1.Text);
         }
         public void login(string username, string password, string depart)
         {
@@ -74,7 +80,7 @@ namespace shop
 
         private void UserAuthentication_Load(object sender, EventArgs e)
         {
-
+            textBox3.Focus();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -143,6 +149,8 @@ namespace shop
         {
             if (e.KeyCode == Keys.Enter)
             {
+                string username = AesOperation.EncryptString(textBox3.Text);
+                string password = AesOperation.EncryptString(textBox2.Text);
                 login(textBox3.Text, textBox2.Text, comboBox1.Text);
             }
         }

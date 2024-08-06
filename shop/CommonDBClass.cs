@@ -13,8 +13,6 @@ using Microsoft.VisualBasic;
 using System.Collections;
 using System.Reflection.Metadata.Ecma335;
 using System.Security.Cryptography;
-
-
 namespace Meropasal
 {
 
@@ -85,10 +83,7 @@ namespace Meropasal
         {
             ConClose();
 }
-    }
-
-
-       
+           }
 
 
         public DataTable LoadSqlData(params string[] Queries )
@@ -122,17 +117,42 @@ namespace Meropasal
                 ConClose();
             }
         }
-        public void encrypt()
+        public object GetSingleValue(string query, Hashtable Parameters = null)
         {
+            //Method to get a single value from the database
+            ConOpen();
+            try
+            {
+                SqlCommand cmd = new SqlCommand(query, SqlConn);
 
+                if (Parameters != null)
+                {
+                    foreach (DictionaryEntry parameter in Parameters)
+                    {
+                        cmd.Parameters.AddWithValue(parameter.Key.ToString(), parameter.Value);
+                    }
+                }
+
+                object result = cmd.ExecuteScalar();
+                return result;
+            }
+            catch (Exception ex)
+            {
+                Interaction.MsgBox(ex.Message);
+                return null;
+            }
+            finally
+            {
+                ConClose();
+            }
         }
-
     }
+
 }
 
 
 
-
+// encryption system
 public class AesOperation
 {
     private static readonly string key = "0347399M0347399M0347399M0347399M"; // Consistent key
