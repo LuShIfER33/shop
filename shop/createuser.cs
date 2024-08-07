@@ -74,7 +74,7 @@ namespace shop
                         dataGridView1.Columns[0].Visible = false;
                         // Log
                         string user = AesOperation.DecryptString(authorToFind);
-                        CommonHealthPostConfigClass.MainHealthPostDatabase.LoadSqlData("insert into [LogDetails] ([FormName],[UserName],[ComputerName],[Datetime],[Action]) values ('create account :  ','" + user + "','" + Environment.MachineName + "','" + DateTime.Now.ToString("yyyyMMddHHmmss") + "','Create user" + textBox1.Text + " ')");
+                        CommonHealthPostConfigClass.MainHealthPostDatabase.LoadSqlData("insert into [LogDetails] ([FormName],[UserName],[ComputerName],[Datetime],[Action]) values ('create account :  ','" + user + "','" + Environment.MachineName + "','" + DateTime.Now.ToString("yyyy:MM:dd:HH:mm:ss") + "','Create user" + textBox1.Text + " ')");
                     }
                     catch (Exception ex)
 
@@ -127,7 +127,7 @@ namespace shop
                 // log filling 
                 string authorToFind = AesOperation.EncryptString(textBox1.Text);
                 string user = AesOperation.DecryptString(authorToFind);
-                CommonHealthPostConfigClass.MainHealthPostDatabase.LoadSqlData("insert into [LogDetails] ([FormName],[UserName],[ComputerName],[Datetime],[Action]) values ('Deleted a account','" + user + "','" + Environment.MachineName + "','" + DateTime.Now.ToString("yyyyMMddHHmmss") + "','Delete user" + textBox1.Text + " ')");
+                CommonHealthPostConfigClass.MainHealthPostDatabase.LoadSqlData("insert into [LogDetails] ([FormName],[UserName],[ComputerName],[Datetime],[Action]) values ('Deleted a account','" + user + "','" + Environment.MachineName + "','" + DateTime.Now.ToString("yyyy:MM:dd:HH:mm:ss") + "','Delete user" + textBox1.Text + " ')");
                 // clear all fields 
                 clearall();
             }

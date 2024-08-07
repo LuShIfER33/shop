@@ -16,27 +16,28 @@ namespace shop
         public items()
         {
             InitializeComponent();
-            dataGridView1.DataSource = CommonHealthPostConfigClass.MainHealthPostDatabase.LoadSqlData("select Items from [dbo].[Items] ");
+            dataGridView1.DataSource = CommonHealthPostConfigClass.MainHealthPostDatabase.LoadSqlData("select Items from [dbo].[Items] where isDeleted !=1 ");
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+
             bool sl0 = false;
             try
             {
                 sl0 = CommonHealthPostConfigClass.MainHealthPostDatabase.ExecuteQuery(Queries:
-                "insert into [dbo].[Items] (Items) values('" + textBox1.Text + "') ");
-                dataGridView1.DataSource = CommonHealthPostConfigClass.MainHealthPostDatabase.LoadSqlData("select Items from [dbo].[Items] ");
+                  "INSERT INTO [dbo].[Items] ([Items], [isDeleted]) VALUES ('" + textBox1.Text + "', '0')");
+                // dataGridView1.DataSource = CommonHealthPostConfigClass.MainHealthPostDatabase.LoadSqlData("select Items from [dbo].[Items] where isDeleted !='1' ");
                 if (sl0)
                 {
                     MessageBox.Show("Successful ");
 
-                    dataGridView1.DataSource = CommonHealthPostConfigClass.MainHealthPostDatabase.LoadSqlData("select Items from [dbo].[Items] ");
+                    dataGridView1.DataSource = CommonHealthPostConfigClass.MainHealthPostDatabase.LoadSqlData("select Items from [dbo].[Items] where isDeleted !='1' ");
                     //Log
 
                     string user = AesOperation.DecryptString( publicvariable.loginuser);
                     CommonHealthPostConfigClass.MainHealthPostDatabase.ExecuteQuery(Queries:
-                        "insert into [LogDetails] ([FormName],[UserName],[ComputerName],[Datetime],[Action]) values ('Item Created by ','" + user + "','" + Environment.MachineName + "','" + DateTime.Now.ToString("yyyyMMddHHmmss") + "','created item called : " + textBox1.Text + "')");
+                        "insert into [LogDetails] ([FormName],[UserName],[ComputerName],[Datetime],[Action]) values ('Item Created by ','" + user + "','" + Environment.MachineName + "','" + DateTime.Now.ToString("yyyy:MM:dd:HH:mm:ss") + "','created item called : " + textBox1.Text + "')");
                 }
             }
             catch (Exception ex)
@@ -60,7 +61,14 @@ namespace shop
                 if (sl0)
                 {
                     MessageBox.Show("Successful ");
-                    dataGridView1.DataSource = CommonHealthPostConfigClass.MainHealthPostDatabase.LoadSqlData("select Items from [dbo].[Items] ");
+                    textBox1.Clear();
+                    dataGridView1.DataSource = CommonHealthPostConfigClass.MainHealthPostDatabase.LoadSqlData("select Items from [dbo].[Items] where isDeleted !='1'");
+
+                    //log save 
+                    string user = AesOperation.DecryptString(publicvariable.loginuser);
+                    CommonHealthPostConfigClass.MainHealthPostDatabase.ExecuteQuery(Queries:
+                        "insert into [LogDetails] ([FormName],[UserName],[ComputerName],[Datetime],[Action]) values ('Item deleted by ','"+ user +"','" + Environment.MachineName + "','" + DateTime.Now.ToString("yyyy:MM:dd:HH:mm:ss") + "','Deleted item called : " + textBox1.Text + "')");
+
                 }
                 else
                 {

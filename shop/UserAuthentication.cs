@@ -65,7 +65,7 @@ namespace shop
                         Form1.Show();
                         //Log deteils entry .
                         string user = AesOperation.DecryptString(authorToFind);
-                        CommonHealthPostConfigClass.MainHealthPostDatabase.LoadSqlData("insert into [LogDetails] ([FormName],[UserName],[ComputerName],[Datetime],[Action]) values ('User_Login','" + user + "','" + Environment.MachineName + "','" + DateTime.Now.ToString("yyyyMMddHHmmss") + "','Login to application')");
+                        CommonHealthPostConfigClass.MainHealthPostDatabase.LoadSqlData("insert into [LogDetails] ([FormName],[UserName],[ComputerName],[Datetime],[Action]) values ('User_Login','" + user + "','" + Environment.MachineName + "','" + DateTime.Now.ToString("yyyy:MM:dd:HH:mm:ss") + "','Login to application')");
                     }
                     else
                     {
