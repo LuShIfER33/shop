@@ -32,27 +32,29 @@ namespace shop
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            string username = AesOperation.EncryptString(textBox3.Text);
+            string username = AesOperation.EncryptString(textBox3.Text.Trim());
             string password = AesOperation.EncryptString(textBox2.Text);
             login(username, password, comboBox1.Text);
+            publicvariable.loginuser=username;
         }
+
         public void login(string username, string password, string depart)
         {
             DataTable dt;
-            dt = CommonHealthPostConfigClass.MainHealthPostDatabase.LoadSqlData("SELECT UserId  FROM [MeroPasal].[dbo].[UserLogin]");
+            dt = CommonHealthPostConfigClass.MainHealthPostDatabase.LoadSqlData("SELECT UserId  FROM [MeroPasal].[dbo].[UserLogin] where isDeleted !='1'");
             string authorToFind = username;
             bool exists = dt.AsEnumerable().Any(row => row.Field<string>("UserId") == authorToFind);
 
             if (exists)
             {
                 DataTable dt1;
-                dt1 = CommonHealthPostConfigClass.MainHealthPostDatabase.LoadSqlData("SELECT Password  FROM [MeroPasal].[dbo].[UserLogin]");
+                dt1 = CommonHealthPostConfigClass.MainHealthPostDatabase.LoadSqlData("SELECT Password  FROM [MeroPasal].[dbo].[UserLogin] where UserID= '" + authorToFind + "'");
                 string authorToFind1 = password;
                 bool exists1 = dt1.AsEnumerable().Any(row => row.Field<string>("Password") == authorToFind1);
                 if (exists1)
                 {
                     DataTable dt2;
-                    dt2 = CommonHealthPostConfigClass.MainHealthPostDatabase.LoadSqlData("SELECT Department  FROM [MeroPasal].[dbo].[UserLogin]");
+                    dt2 = CommonHealthPostConfigClass.MainHealthPostDatabase.LoadSqlData("SELECT Department  FROM [MeroPasal].[dbo].[UserLogin] where UserID= '" + authorToFind + "' ");
                     string authorToFind2 = depart;
                     bool exists2 = dt2.AsEnumerable().Any(row => row.Field<string>("Department") == authorToFind2);
                     if (exists2)
@@ -61,6 +63,9 @@ namespace shop
                         this.Hide();
                         Form1.toolStripStatusLabel2.Text = textBox3.Text;
                         Form1.Show();
+                        //Log deteils entry .
+                        string user = AesOperation.DecryptString(authorToFind);
+                        CommonHealthPostConfigClass.MainHealthPostDatabase.LoadSqlData("insert into [LogDetails] ([FormName],[UserName],[ComputerName],[Datetime],[Action]) values ('User_Login','" + user + "','" + Environment.MachineName + "','" + DateTime.Now.ToString("yyyyMMddHHmmss") + "','Login to application')");
                     }
                     else
                     {

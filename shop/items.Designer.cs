@@ -34,7 +34,6 @@
             textBox1 = new TextBox();
             button2 = new Button();
             button1 = new Button();
-            textBox2 = new TextBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             groupBox1.SuspendLayout();
             SuspendLayout();
@@ -42,11 +41,12 @@
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(470, 12);
+            dataGridView1.Location = new Point(350, 4);
+            dataGridView1.Margin = new Padding(3, 2, 3, 2);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(308, 426);
+            dataGridView1.Size = new Size(151, 182);
             dataGridView1.TabIndex = 1;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             dataGridView1.CellDoubleClick += dataGridView1_CellDoubleClick;
@@ -60,28 +60,32 @@
             groupBox1.Controls.Add(button1);
             groupBox1.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             groupBox1.ForeColor = SystemColors.MenuHighlight;
-            groupBox1.Location = new Point(38, 79);
+            groupBox1.Location = new Point(3, 4);
+            groupBox1.Margin = new Padding(3, 2, 3, 2);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(390, 242);
+            groupBox1.Padding = new Padding(3, 2, 3, 2);
+            groupBox1.Size = new Size(341, 182);
             groupBox1.TabIndex = 5;
             groupBox1.TabStop = false;
             groupBox1.Text = "                           ";
+            groupBox1.Enter += groupBox1_Enter;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.BackColor = SystemColors.ActiveCaption;
-            label1.Location = new Point(126, 26);
+            label1.Location = new Point(110, 20);
             label1.Name = "label1";
-            label1.Size = new Size(121, 23);
+            label1.Size = new Size(101, 19);
             label1.TabIndex = 5;
             label1.Text = "Name of Item";
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(37, 75);
+            textBox1.Location = new Point(32, 69);
+            textBox1.Margin = new Padding(3, 2, 3, 2);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(319, 30);
+            textBox1.Size = new Size(280, 26);
             textBox1.TabIndex = 3;
             textBox1.Click += textBox1_TextChanged;
             textBox1.TextChanged += textBox1_TextChanged;
@@ -89,9 +93,10 @@
             // 
             // button2
             // 
-            button2.Location = new Point(262, 180);
+            button2.Location = new Point(230, 135);
+            button2.Margin = new Padding(3, 2, 3, 2);
             button2.Name = "button2";
-            button2.Size = new Size(94, 29);
+            button2.Size = new Size(82, 30);
             button2.TabIndex = 2;
             button2.Text = "DELETE";
             button2.UseVisualStyleBackColor = true;
@@ -99,40 +104,32 @@
             // 
             // button1
             // 
-            button1.Location = new Point(37, 180);
+            button1.Location = new Point(32, 135);
+            button1.Margin = new Padding(3, 2, 3, 2);
             button1.Name = "button1";
-            button1.Size = new Size(94, 29);
+            button1.Size = new Size(82, 30);
             button1.TabIndex = 1;
             button1.Text = "ADD";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
-            // textBox2
-            // 
-            textBox2.BackColor = SystemColors.Highlight;
-            textBox2.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            textBox2.Location = new Point(138, 43);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(172, 30);
-            textBox2.TabIndex = 4;
-            textBox2.Text = "            Items";
-            // 
             // items
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(textBox2);
+            ClientSize = new Size(514, 192);
             Controls.Add(groupBox1);
             Controls.Add(dataGridView1);
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            Margin = new Padding(3, 2, 3, 2);
             Name = "items";
             Text = "items";
+            Activated += items_Activated;
+            Load += items_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion

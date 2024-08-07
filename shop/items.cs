@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.VisualBasic.ApplicationServices;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -26,9 +27,17 @@ namespace shop
                 sl0 = CommonHealthPostConfigClass.MainHealthPostDatabase.ExecuteQuery(Queries:
                 "insert into [dbo].[Items] (Items) values('" + textBox1.Text + "') ");
                 dataGridView1.DataSource = CommonHealthPostConfigClass.MainHealthPostDatabase.LoadSqlData("select Items from [dbo].[Items] ");
-                MessageBox.Show("Successful ");
-                dataGridView1.DataSource = CommonHealthPostConfigClass.MainHealthPostDatabase.LoadSqlData("select Items from [dbo].[Items] ");
+                if (sl0)
+                {
+                    MessageBox.Show("Successful ");
 
+                    dataGridView1.DataSource = CommonHealthPostConfigClass.MainHealthPostDatabase.LoadSqlData("select Items from [dbo].[Items] ");
+                    //Log
+
+                    string user = AesOperation.DecryptString( publicvariable.loginuser);
+                    CommonHealthPostConfigClass.MainHealthPostDatabase.ExecuteQuery(Queries:
+                        "insert into [LogDetails] ([FormName],[UserName],[ComputerName],[Datetime],[Action]) values ('Item Created by ','" + user + "','" + Environment.MachineName + "','" + DateTime.Now.ToString("yyyyMMddHHmmss") + "','created item called : " + textBox1.Text + "')");
+                }
             }
             catch (Exception ex)
 
@@ -47,11 +56,16 @@ namespace shop
             try
             {
                 sl0 = CommonHealthPostConfigClass.MainHealthPostDatabase.ExecuteQuery(Queries:
-                "delete from [dbo].[Items] where Items=('" + textBox1.Text + "') ");
-                dataGridView1.DataSource = CommonHealthPostConfigClass.MainHealthPostDatabase.LoadSqlData("select Items from [dbo].[Items] ");
-                MessageBox.Show("Successful ");
-                dataGridView1.DataSource = CommonHealthPostConfigClass.MainHealthPostDatabase.LoadSqlData("select Items from [dbo].[Items] ");
-
+                " update [dbo].[Items] set isDeleted='1' where Items='"+textBox1.Text+"' ");
+                if (sl0)
+                {
+                    MessageBox.Show("Successful ");
+                    dataGridView1.DataSource = CommonHealthPostConfigClass.MainHealthPostDatabase.LoadSqlData("select Items from [dbo].[Items] ");
+                }
+                else
+                {
+                    MessageBox.Show("Error !");
+                }
             }
             catch (Exception ex)
 
@@ -78,6 +92,21 @@ namespace shop
         {
             DataGridViewRow row = this.dataGridView1.Rows[e.RowIndex];
             textBox1.Text = row.Cells[0].Value.ToString();
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void items_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void items_Activated(object sender, EventArgs e)
+        {
+
         }
     }
 }

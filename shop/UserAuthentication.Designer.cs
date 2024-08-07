@@ -41,7 +41,6 @@
             label3 = new Label();
             label2 = new Label();
             label1 = new Label();
-            button1 = new Button();
             label5 = new Label();
             textBox1 = new TextBox();
             pictureBox1 = new PictureBox();
@@ -88,7 +87,6 @@
             groupBox2.Controls.Add(label3);
             groupBox2.Controls.Add(label2);
             groupBox2.Controls.Add(label1);
-            groupBox2.Controls.Add(button1);
             groupBox2.Location = new Point(18, 17);
             groupBox2.Margin = new Padding(3, 2, 3, 2);
             groupBox2.Name = "groupBox2";
@@ -102,7 +100,7 @@
             // 
             button2.BackColor = SystemColors.ActiveCaption;
             button2.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
-            button2.Location = new Point(265, 200);
+            button2.Location = new Point(174, 197);
             button2.Margin = new Padding(3, 2, 3, 2);
             button2.Name = "button2";
             button2.Size = new Size(135, 40);
@@ -198,19 +196,6 @@
             label1.TabIndex = 11;
             label1.Text = "User Id :";
             // 
-            // button1
-            // 
-            button1.BackColor = SystemColors.ActiveCaption;
-            button1.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.Location = new Point(97, 200);
-            button1.Margin = new Padding(3, 2, 3, 2);
-            button1.Name = "button1";
-            button1.Size = new Size(135, 40);
-            button1.TabIndex = 7;
-            button1.Text = "Close ✖";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
-            // 
             // label5
             // 
             label5.AutoSize = true;
@@ -236,8 +221,9 @@
             // 
             pictureBox1.BorderStyle = BorderStyle.FixedSingle;
             pictureBox1.ErrorImage = (Image)resources.GetObject("pictureBox1.ErrorImage");
-            pictureBox1.Image = Properties.Resources._474595;
-            pictureBox1.Location = new Point(465, 26);
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.ImageLocation = "";
+            pictureBox1.Location = new Point(468, 26);
             pictureBox1.Margin = new Padding(3, 2, 3, 2);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(163, 159);
@@ -256,6 +242,7 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(3, 2, 3, 2);
             Name = "UserAuthentication";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "UserAuthentication";
             Load += UserAuthentication_Load;
             KeyDown += UserAuthentication_KeyDown;

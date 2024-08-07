@@ -60,7 +60,7 @@
             dataGridView1.ReadOnly = true;
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(221, 287);
+            dataGridView1.Size = new Size(140, 287);
             dataGridView1.TabIndex = 4;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             dataGridView1.CellDoubleClick += dataGridView1_CellDoubleClick;
@@ -101,6 +101,7 @@
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(270, 27);
             comboBox1.TabIndex = 18;
+            comboBox1.KeyDown += comboBox1_KeyDown;
             // 
             // textBox6
             // 
@@ -111,6 +112,7 @@
             textBox6.Name = "textBox6";
             textBox6.Size = new Size(270, 50);
             textBox6.TabIndex = 13;
+            textBox6.KeyDown += textBox6_KeyDown;
             // 
             // textBox5
             // 
@@ -120,6 +122,7 @@
             textBox5.Name = "textBox5";
             textBox5.Size = new Size(270, 27);
             textBox5.TabIndex = 14;
+            textBox5.KeyDown += textBox5_KeyDown;
             // 
             // textBox3
             // 
@@ -130,6 +133,7 @@
             textBox3.PasswordChar = '*';
             textBox3.Size = new Size(270, 27);
             textBox3.TabIndex = 15;
+            textBox3.KeyDown += textBox3_KeyDown;
             // 
             // textBox2
             // 
@@ -140,6 +144,7 @@
             textBox2.PasswordChar = '*';
             textBox2.Size = new Size(270, 27);
             textBox2.TabIndex = 16;
+            textBox2.KeyDown += textBox2_KeyDown;
             // 
             // textBox1
             // 
@@ -149,12 +154,13 @@
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(270, 27);
             textBox1.TabIndex = 17;
+            textBox1.KeyDown += textBox1_KeyDown;
             // 
             // button4
             // 
             button4.BackColor = SystemColors.ActiveCaption;
             button4.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
-            button4.Location = new Point(242, 255);
+            button4.Location = new Point(186, 258);
             button4.Margin = new Padding(3, 2, 3, 2);
             button4.Name = "button4";
             button4.Size = new Size(82, 31);
@@ -167,7 +173,7 @@
             // 
             button2.BackColor = SystemColors.ActiveCaption;
             button2.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
-            button2.Location = new Point(147, 255);
+            button2.Location = new Point(26, 258);
             button2.Margin = new Padding(3, 2, 3, 2);
             button2.Name = "button2";
             button2.Size = new Size(82, 31);
@@ -181,7 +187,7 @@
             // 
             button1.BackColor = SystemColors.ActiveCaption;
             button1.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.Location = new Point(340, 255);
+            button1.Location = new Point(313, 258);
             button1.Margin = new Padding(3, 2, 3, 2);
             button1.Name = "button1";
             button1.Size = new Size(82, 31);
@@ -255,15 +261,16 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
-            ClientSize = new Size(698, 318);
+            ClientSize = new Size(615, 318);
             Controls.Add(groupBox1);
             Controls.Add(dataGridView1);
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(3, 2, 3, 2);
             Name = "createuser";
-            StartPosition = FormStartPosition.CenterParent;
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "createuser";
+            Activated += createuser_Activated;
             Load += createuser_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             groupBox1.ResumeLayout(false);
