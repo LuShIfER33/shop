@@ -15,7 +15,7 @@ namespace shop
         public supplier()
         {
             InitializeComponent();
-            dataGridView1.DataSource = CommonHealthPostConfigClass.MainHealthPostDatabase.LoadSqlData("select SName,SContact,SPan from [dbo].[Supplier] ");
+            dataGridView1.DataSource = CommonHealthPostConfigClass.MainHealthPostDatabase.LoadSqlData("select SName,SContact,SPan from [dbo].[Supplier] where isDeleted !='1'");
             textBox1.TabIndex = 1;
             textBox2.TabIndex = 2;
             textBox3.TabIndex = 3;
@@ -30,10 +30,10 @@ namespace shop
             try
             {
                 sl0 = CommonHealthPostConfigClass.MainHealthPostDatabase.ExecuteQuery(Queries:
-                "INSERT INTO [MeroPasal].[dbo].[Supplier]  (SName,SContact,SPan) VALUES('" + textBox1.Text + "','" + textBox2.Text + "','" + textBox3.Text + "') ");
-                dataGridView1.DataSource = CommonHealthPostConfigClass.MainHealthPostDatabase.LoadSqlData("select SName,SContact,SPan from [dbo].[Supplier] ");
+                "INSERT INTO [MeroPasal].[dbo].[Supplier]  (SName,SContact,SPan,isDeleted) VALUES('" + textBox1.Text + "','" + textBox2.Text + "','" + textBox3.Text + "','0') ");
+                dataGridView1.DataSource = CommonHealthPostConfigClass.MainHealthPostDatabase.LoadSqlData("select SName,SContact,SPan from [dbo].[Supplier] where isDeleted !='1'");
                 MessageBox.Show("Successful ");
-                dataGridView1.DataSource = CommonHealthPostConfigClass.MainHealthPostDatabase.LoadSqlData("select SName,SContact,SPan from [dbo].[Supplier] ");
+                dataGridView1.DataSource = CommonHealthPostConfigClass.MainHealthPostDatabase.LoadSqlData("select SName,SContact,SPan from [dbo].[Supplier] where isDeleted !='1'");
 
             }
             catch (Exception ex)
@@ -58,10 +58,10 @@ namespace shop
             try
             {
                 sl0 = CommonHealthPostConfigClass.MainHealthPostDatabase.ExecuteQuery(Queries:
-                "delete from [dbo].[Supplier] where (SPan) = ('" + textBox4.Text + "') ");
-                dataGridView1.DataSource = CommonHealthPostConfigClass.MainHealthPostDatabase.LoadSqlData("select SName,SContact,SPan from [dbo].[Supplier] ");
+                "UPDATE [dbo].[Supplier] set isDeleted='1' where (SPan) = ('" + textBox4.Text + "') ");
+                dataGridView1.DataSource = CommonHealthPostConfigClass.MainHealthPostDatabase.LoadSqlData("select SName,SContact,SPan from [dbo].[Supplier] where isDeleted !='1'");
                 MessageBox.Show("Successful ");
-                dataGridView1.DataSource = CommonHealthPostConfigClass.MainHealthPostDatabase.LoadSqlData("select SName,SContact,SPan from [dbo].[Supplier] ");
+                dataGridView1.DataSource = CommonHealthPostConfigClass.MainHealthPostDatabase.LoadSqlData("select SName,SContact,SPan from [dbo].[Supplier] where isDeleted !='1'");
 
             }
             catch (Exception ex)
@@ -93,6 +93,12 @@ namespace shop
         private void supplier_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow row = this.dataGridView1.Rows[e.RowIndex];
+            textBox4.Text = row.Cells[2].Value.ToString();
         }
     }
 }

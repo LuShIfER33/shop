@@ -87,11 +87,11 @@
             groupBox2.Controls.Add(label3);
             groupBox2.Controls.Add(label2);
             groupBox2.Controls.Add(label1);
-            groupBox2.Location = new Point(18, 17);
+            groupBox2.Location = new Point(6, 17);
             groupBox2.Margin = new Padding(3, 2, 3, 2);
             groupBox2.Name = "groupBox2";
             groupBox2.Padding = new Padding(3, 2, 3, 2);
-            groupBox2.Size = new Size(441, 255);
+            groupBox2.Size = new Size(453, 255);
             groupBox2.TabIndex = 14;
             groupBox2.TabStop = false;
             groupBox2.Enter += groupBox2_Enter;
@@ -117,7 +117,7 @@
             comboBox1.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             comboBox1.FormattingEnabled = true;
             comboBox1.Items.AddRange(new object[] { "Admin", "Counter", "Account" });
-            comboBox1.Location = new Point(104, 150);
+            comboBox1.Location = new Point(136, 149);
             comboBox1.Margin = new Padding(5);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(296, 33);
@@ -128,7 +128,7 @@
             // 
             dateTimePicker1.Enabled = false;
             dateTimePicker1.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            dateTimePicker1.Location = new Point(104, 18);
+            dateTimePicker1.Location = new Point(136, 17);
             dateTimePicker1.Margin = new Padding(5);
             dateTimePicker1.Name = "dateTimePicker1";
             dateTimePicker1.Size = new Size(296, 33);
@@ -137,7 +137,7 @@
             // textBox3
             // 
             textBox3.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox3.Location = new Point(104, 60);
+            textBox3.Location = new Point(136, 59);
             textBox3.Margin = new Padding(5);
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(296, 33);
@@ -148,7 +148,7 @@
             // textBox2
             // 
             textBox2.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox2.Location = new Point(104, 106);
+            textBox2.Location = new Point(136, 105);
             textBox2.Margin = new Padding(5);
             textBox2.Name = "textBox2";
             textBox2.PasswordChar = '*';
@@ -159,40 +159,40 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            label4.Location = new Point(47, 29);
+            label4.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label4.Location = new Point(68, 23);
             label4.Name = "label4";
-            label4.Size = new Size(50, 20);
+            label4.Size = new Size(60, 25);
             label4.TabIndex = 8;
             label4.Text = "Date :";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            label3.Location = new Point(6, 158);
+            label3.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.Location = new Point(7, 152);
             label3.Name = "label3";
-            label3.Size = new Size(100, 20);
+            label3.Size = new Size(121, 25);
             label3.TabIndex = 9;
             label3.Text = "Department :";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            label2.Location = new Point(16, 114);
+            label2.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.Location = new Point(28, 108);
             label2.Name = "label2";
-            label2.Size = new Size(81, 20);
+            label2.Size = new Size(100, 25);
             label2.TabIndex = 10;
             label2.Text = "Password :";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            label1.Location = new Point(31, 68);
+            label1.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(53, 62);
             label1.Name = "label1";
-            label1.Size = new Size(65, 20);
+            label1.Size = new Size(80, 25);
             label1.TabIndex = 11;
             label1.Text = "User Id :";
             // 

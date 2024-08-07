@@ -35,7 +35,7 @@ namespace shop
             string username = AesOperation.EncryptString(textBox3.Text.Trim());
             string password = AesOperation.EncryptString(textBox2.Text);
             login(username, password, comboBox1.Text);
-            publicvariable.loginuser=username;
+            publicvariable.loginuser = username;
         }
 
         public void login(string username, string password, string depart)

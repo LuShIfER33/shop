@@ -280,7 +280,7 @@
             // 
             toolStripStatusLabel2.AutoSize = false;
             toolStripStatusLabel2.Name = "toolStripStatusLabel2";
-            toolStripStatusLabel2.Size = new Size(39, 17);
+            toolStripStatusLabel2.Size = new Size(100, 17);
             // 
             // Form1
             // 
