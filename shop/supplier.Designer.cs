@@ -81,7 +81,7 @@
             groupBox1.Controls.Add(textBox2);
             groupBox1.Controls.Add(button1);
             groupBox1.Controls.Add(textBox1);
-            groupBox1.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            groupBox1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             groupBox1.ForeColor = SystemColors.Desktop;
             groupBox1.Location = new Point(5, 13);
             groupBox1.Margin = new Padding(3, 2, 3, 2);
@@ -90,6 +90,7 @@
             groupBox1.Size = new Size(493, 187);
             groupBox1.TabIndex = 7;
             groupBox1.TabStop = false;
+            groupBox1.Text = "Create supplier.";
             // 
             // label3
             // 
@@ -171,6 +172,7 @@
             groupBox2.Size = new Size(491, 79);
             groupBox2.TabIndex = 8;
             groupBox2.TabStop = false;
+            groupBox2.Text = "Delete Supplier.";
             // 
             // label4
             // 

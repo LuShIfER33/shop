@@ -197,10 +197,10 @@ namespace shop
 
         private void Salesitem_Load(object sender, EventArgs e)
         {
-            comboBox1.DataSource = CommonHealthPostConfigClass.MainHealthPostDatabase.LoadSqlData("select Unit From dbo.Units");
+            comboBox1.DataSource = CommonHealthPostConfigClass.MainHealthPostDatabase.LoadSqlData("select Unit From dbo.Units where isDeleted !='1'");
             comboBox1.DisplayMember = "Unit";
 
-            textBox1.DataSource = CommonHealthPostConfigClass.MainHealthPostDatabase.LoadSqlData("  select Items From dbo.Items");
+            textBox1.DataSource = CommonHealthPostConfigClass.MainHealthPostDatabase.LoadSqlData("  select Items From dbo.Items where isDeleted !='1'");
             textBox1.DisplayMember = "Items";
         }
 
